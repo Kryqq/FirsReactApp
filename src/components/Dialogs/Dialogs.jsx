@@ -5,11 +5,11 @@ import classes from './Dialogs.module.css';
 
 const Dialogs = (props) => {
 	debugger
-   let dialogsElements = props.dialogsData.map((dialog) => {
+   let dialogsElements = props.state.dialogsData.map((dialog) => {
       return <DialogItem name={dialog.name} id={dialog.id} />;
    });
 
-   let messagesElements = props.messageData.map((message) => {
+   let messagesElements = props.state.messageData.map((message) => {
       return <Message message={message.message} />;
    });
 

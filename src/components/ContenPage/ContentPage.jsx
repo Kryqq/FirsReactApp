@@ -6,7 +6,7 @@ const ContentPage = (props) => {
    return (
       <div>
          <ProfileInfo></ProfileInfo>
-         <MyPosts postsData={props.postsData}></MyPosts>
+         <MyPosts postsData={props.state.postsData}></MyPosts>
       </div>
    );
 };

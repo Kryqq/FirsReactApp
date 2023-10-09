@@ -1,18 +1,42 @@
 .dialogs {
    display: grid;
+
    grid-template-columns: 2fr 10fr;
+   border-radius: 20px;
+  
 }
 .dialog {
    padding: 10px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
 }
 .dialog.active {
-   padding: 10px;
-   color: gold;
+   display: flex;
+   align-items: center;
+   border-bottom: 2px solid rgb(48, 48, 82);
+}
+.dialog.active:last-child {
+   border-bottom: 1px solid rgb(48, 48, 82);
 }
 
 .messages {
-   padding: 10px;
+   font-size: 20px;
+   padding: 15px;
+
+   border-left: 5px solid rgb(48, 48, 82);
 }
 
 .message {
+}
+.avatar {
+   display: flex;
+   width: 55px;
+   height: 55px;
+   border-radius: 100%;
+   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.usersName {
+   padding-top: 10px;
+   text-decoration: none;
 }

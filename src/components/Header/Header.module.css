@@ -1,7 +1,8 @@
 .header {
+   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
    grid-area: h;
-   background: green;
-   
+   background: rgb(31, 31, 53);
+   border-radius: 10px;
 }
 
 .header img {

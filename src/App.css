@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@600&family=Roboto:wght@400;500&display=swap');
+
 body {
-   background: #727272;
+   font-family: 'Montserrat', sans-serif;
+   background: rgb(51, 52, 82);
 }
 
 .app-wrapper {
    margin: 0 auto;
    width: 1200px;
    display: grid;
-   gap: 10px;
+   gap: 15px;
 
    grid-template-rows: 60px 1fr;
 
@@ -18,6 +21,7 @@ body {
 }
 
 .app-wrapper-content {
-   background: rgb(152, 152, 228);
+	border-radius: 20px;
+   background: rgb(31, 31, 53);
    grid-area: c;
 }

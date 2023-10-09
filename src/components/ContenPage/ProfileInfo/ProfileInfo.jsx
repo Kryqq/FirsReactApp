@@ -2,7 +2,7 @@ import classes from './ProfileInfo.module.css';
 const ProfileInfo = () => {
    return (
       <div>
-         maincontent
+         Nikolay Petrovitch
          <div>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyTjeJUaD3MswsasRaok9NP4VI9a6sWzTksQ&usqp=CAU"></img>
          </div>

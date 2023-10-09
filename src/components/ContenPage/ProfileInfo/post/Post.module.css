@@ -1,10 +1,11 @@
 .item {
+
    align-items: center;
    display: flex;
    color: white;
 }
 .item img {
-   padding: 0px 20px;
+  
    border-radius: 50%;
    box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
    height: 5em;
@@ -13,4 +14,7 @@
 
 .likes {
    margin-left: 120px;
+}
+.message{
+ margin-left: 40px;
 }

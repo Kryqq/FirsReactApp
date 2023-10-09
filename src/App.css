@@ -18,6 +18,6 @@ body {
 }
 
 .app-wrapper-content {
-   background: blue;
+   background: rgb(152, 152, 228);
    grid-area: c;
 }

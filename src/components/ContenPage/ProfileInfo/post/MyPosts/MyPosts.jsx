@@ -1,5 +1,5 @@
 import classes from './MyPosts.module.css';
-import Post from './post/Post';
+import Post from '../Post';
 const MyPosts = () => {
    return (
       <div>

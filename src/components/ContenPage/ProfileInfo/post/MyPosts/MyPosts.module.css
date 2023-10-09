@@ -1,0 +1,27 @@
+.item {
+
+   padding-right: 10px;
+}
+
+.myPostsBlock {
+   justify-items: center;
+   flex-direction: column;
+   display: flex;
+   padding: 10px;
+}
+.postArea span {
+   padding: 10px 0px;
+}
+.postArea {
+   width: 600px;
+   flex-direction: column;
+   display: flex;
+}
+
+.postButton {
+   margin-top: 10px;
+}
+.postButtonDiv {
+   display: flex;
+   justify-content: center;
+}

@@ -1,9 +1,12 @@
+import { rerenderEntireTree } from '../render';
+
 let state = {
    profilePage: {
       postsData: [
          { id: 1, post: "Hi, how now I'm using social network!", likesCount: 14 },
-         { id: 2, post: "I'ts my first post", likesCount: 18 },
+         { id: 2, post: "I'ts my first post!", likesCount: 18 },
       ],
+      newPostText: ['aisdzxckfjgdioertlvbncv;bjn'],
    },
    messagesPage: {
       messageData: [
@@ -36,9 +39,29 @@ let state = {
             avatar:
                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuoAneegT5NGzLQ2HWwmzi4Xv_03Cu4W-pQuhV7PRQT3hrNKj74fKdrKAnBM9lAnlZ1ms&usqp=CAU',
          },
-         { id: 6, name: 'Ekaterina', avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKIFQbeN4HOyoNdcWcCa-Bi_wXEG4XVtG3lA&usqp=CAU' },
+         {
+            id: 6,
+            name: 'Ekaterina',
+            avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKIFQbeN4HOyoNdcWcCa-Bi_wXEG4XVtG3lA&usqp=CAU',
+         },
       ],
    },
+};
+
+export let updateNewPostText = (newText) => {
+   state.profilePage.newPostText = newText;
+   rerenderEntireTree(state);
+};
+
+export let addPost = (postMessage) => {
+   let newPost = {
+      id: 9,
+      post: postMessage,
+      likesCount: 123,
+   };
+
+   state.profilePage.postsData.push(newPost);
+   rerenderEntireTree(state);
 };
 
 export default state;

@@ -1,12 +1,14 @@
-import { rerenderEntireTree } from '../render';
+let rerenderEntireTree = () => {
+   console.log('asd');
+};
 
 let state = {
    profilePage: {
       postsData: [
-         { id: 1, post: "Hi, how now I'm using social network!", likesCount: 14 },
-         { id: 2, post: "I'ts my first post!", likesCount: 18 },
+         { id: 1, message: "Hi, how now I'm using social network!", likesCount: 14 },
+         { id: 2, message: "I'ts my first post!", likesCount: 18 },
       ],
-      newPostText: ['aisdzxckfjgdioertlvbncv;bjn'],
+      newPostText: ['zxc'],
    },
    messagesPage: {
       messageData: [
@@ -47,21 +49,27 @@ let state = {
       ],
    },
 };
+window.state = state;
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
    state.profilePage.newPostText = newText;
    rerenderEntireTree(state);
 };
 
-export let addPost = (postMessage) => {
+export const addPost = () => {
    let newPost = {
-      id: 9,
-      post: postMessage,
+      id: 7,
+      message: state.profilePage.newPostText,
       likesCount: 123,
    };
 
    state.profilePage.postsData.push(newPost);
+   state.profilePage.newPostText = 'asd';
    rerenderEntireTree(state);
 };
+
+export const subscribe = (observer)=>{
+	rerenderEntireTree = observer
+}
 
 export default state;

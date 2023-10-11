@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import classes from './Dialogs.module.css';
 
 const Dialogs = (props) => {
+ 
    let dialogsElements = props.state.dialogsData.map((dialog) => {
       return <DialogItem name={dialog.name} id={dialog.id} avatar={dialog.avatar} />;
    });

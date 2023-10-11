@@ -3,18 +3,15 @@ import Post from '../Post';
 import React from 'react';
 
 const MyPosts = (props) => {
+   let postsElement = props.postsData.map((message) => <Post post={message.message} likesCount={message.likesCount} />);
    let newPostElement = React.createRef();
 
    let addPost = () => {
-      let text = newPostElement.current.value;
-
-      props.addPost(text);
-
-      newPostElement.current.value = '';
+      props.addPost();
    };
    let onPostChange = () => {
       let text = newPostElement.current.value;
-
+      props.updateNewPostText(text);
    };
    return (
       <div className={classes.myPostsBlock}>
@@ -30,10 +27,7 @@ const MyPosts = (props) => {
             </button>
          </div>
          <div className={classes.posts}>
-            <div className={classes.item}>
-               <Post likesCount={props.postsData[0].likesCount} message={props.postsData[0].post}></Post>
-               <Post likesCount={props.postsData[1].likesCount} message={props.postsData[1].post}></Post>
-            </div>
+            <div className={classes.item}> {postsElement} </div>
          </div>
       </div>
    );

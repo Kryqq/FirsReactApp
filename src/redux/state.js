@@ -1,6 +1,4 @@
-let rerenderEntireTree = () => {
-   console.log('asd');
-};
+let rerenderEntireTree = () => {};
 
 let state = {
    profilePage: {
@@ -8,7 +6,7 @@ let state = {
          { id: 1, message: "Hi, how now I'm using social network!", likesCount: 14 },
          { id: 2, message: "I'ts my first post!", likesCount: 18 },
       ],
-      newPostText: ['zxc'],
+      newPostText: ['tesst'],
    },
    messagesPage: {
       messageData: [
@@ -17,6 +15,7 @@ let state = {
          { id: 3, message: "I'am fine, and you?" },
          { id: 4, message: "I'm too, thank you!" },
       ],
+      newMessageText: ['ZXC'],
       dialogsData: [
          {
             id: 1,
@@ -64,12 +63,27 @@ export const addPost = () => {
    };
 
    state.profilePage.postsData.push(newPost);
-   state.profilePage.newPostText = 'asd';
+
    rerenderEntireTree(state);
 };
 
-export const subscribe = (observer)=>{
-	rerenderEntireTree = observer
-}
+export const addMessage = () => {
+   let newMessage = {
+      id: 12,
+      message: state.messagesPage.newMessageText,
+   };
+
+   state.messagesPage.messageData.push(newMessage);
+   rerenderEntireTree(state);
+};
+
+export const updateNewMessageText = (newMsgText) => {
+   state.messageData.newMessageText = newMsgText;
+   rerenderEntireTree(state);
+};
+
+export const subscribe = (observer) => {
+   rerenderEntireTree = observer;
+};
 
 export default state;

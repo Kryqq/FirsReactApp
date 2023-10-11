@@ -11,6 +11,7 @@ const DialogItem = (props) => {
          <NavLink className={classes.usersName} to={path}>
             {name}
          </NavLink>
+	    
       </div>
    );
 };

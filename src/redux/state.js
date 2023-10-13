@@ -76,7 +76,7 @@ let store = {
       };
 
       this.state.messagesPage.messageData.push(newMessage);
-      this.rerenderEntireTree(this.state);
+      this._callSubscriber(this.state);
    },
    updateNewMessageText(newMsgText) {
       this._state.messageData.newMessageText = newMsgText;

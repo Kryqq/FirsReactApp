@@ -3,7 +3,7 @@ const SEND_MESSAGE = 'SEND-MESSAGE';
 
  const dialogsReducer = (state, action) => {
    if (action.type === SEND_MESSAGE) {
-      let body = state.messagesPage.newMessageBody;
+      let body = state.newMessageBody;
       state.newMessageBody = '';
       state.messageData.push({ id: 7, message: body });
    } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {

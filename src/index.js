@@ -21,6 +21,9 @@ let rerenderEntireTree = (state) => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 rerenderEntireTree(store.getState());
+
 store.subscribe(rerenderEntireTree);
+
 reportWebVitals();

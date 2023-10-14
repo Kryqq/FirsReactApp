@@ -10,7 +10,7 @@ const ContentPage = (props) => {
             postsData={props.state.postsData}
             addPost={props.addPost}
             newPostText={props.newPostText}
-            updateNewPostText={props.updateNewPostText}
+            dispatch={props.dispatch}
          ></MyPosts>
       </div>
    );

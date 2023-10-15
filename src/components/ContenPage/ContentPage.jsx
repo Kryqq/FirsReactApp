@@ -1,23 +1,13 @@
-import MyPosts from './ProfileInfo/post/MyPosts/MyPosts';
-
+import MyPostsContainer from './ProfileInfo/post/MyPosts/MyPostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const ContentPage = (props) => {
-
    return (
-
       <div>
          <ProfileInfo></ProfileInfo>
-         <MyPosts
-	    	 
-            postsData={props.state.postsData}
-            addPost={props.addPost}
-            newPostText={props.newPostText}
-            dispatch={props.dispatch}
-         ></MyPosts>
+         <MyPostsContainer store={props.store}></MyPostsContainer>
       </div>
    );
-  
 };
 
 export default ContentPage;

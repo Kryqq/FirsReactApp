@@ -1,7 +1,7 @@
 import DialogItem from './DialogsItem/DialogsItem';
 import Message from './Message/Message';
-import { sendMessageActionCreator } from '../../redux/state';
-import { updateNewMessageBodyCreator } from '../../redux/state';
+import { sendMessageActionCreator } from '../../redux/dialogs-reducer';
+import { updateNewMessageBodyCreator } from '../../redux/dialogs-reducer';
 import classes from './Dialogs.module.css';
 import React from 'react';
 

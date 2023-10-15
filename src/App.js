@@ -10,6 +10,7 @@ import Music from './components/Music/Music';
 import { Routes, Route } from 'react-router-dom';
 
 const App = (props) => {
+	
    return (
       <div className="app-wrapper">
          <Header />
